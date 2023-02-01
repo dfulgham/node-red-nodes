@@ -97,6 +97,7 @@ module.exports = function(RED) {
                         sendopts.references = msg.references;
                         sendopts.headers = msg.headers;
                         sendopts.priority = msg.priority;
+                        sendopts.messageId = msg.messageId;
                     }
                     if (msg.hasOwnProperty("topic") && msg.topic === '') { sendopts.subject = ""; }
                     else { sendopts.subject = msg.topic || msg.title || "Message from Node-RED"; } // subject line
